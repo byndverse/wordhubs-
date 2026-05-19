@@ -39,7 +39,7 @@
     .logo-bar {
       width: 100%;
       max-width: 960px;
-      margin-bottom: 32px;
+      margin-top: 32px;
       display: flex;
       justify-content: center;
     }
@@ -149,7 +149,7 @@
 
     /* ── Responsive ─────────────────────────────────────────────── */
     @media (max-width: 720px) {
-      .logo-bar { margin-bottom: 24px; }
+      .logo-bar { margin-top: 24px; }
       .page { grid-template-columns: 1fr; grid-template-rows: auto; row-gap: 32px; }
       .headline  { grid-column: 1; grid-row: 1; }
       .optin-col { grid-column: 1; grid-row: 2; }
@@ -158,18 +158,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Logo -->
-  <div class="logo-bar">
-    <img
-      src="logo.webp"
-      alt="iMarketing Club"
-      width="160"
-      height="160"
-      loading="eager"
-      decoding="async"
-    />
-  </div>
 
   <!-- Main content -->
   <div class="page">
@@ -202,6 +190,18 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-bar">
+    <img
+      src="logo.webp"
+      alt="iMarketing Club"
+      width="160"
+      height="160"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
 
   <!-- GetResponse Analytics — loaded after page content is painted -->
