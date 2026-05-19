@@ -35,24 +35,6 @@
       padding: 24px 16px;
     }
 
-    /* ── Logo bar ───────────────────────────────────────────────── */
-    .logo-bar {
-      width: 100%;
-      max-width: 960px;
-      margin-top: 32px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .logo-bar img {
-      width: 160px;
-      height: auto;
-      background: #fff;
-      border-radius: 10px;
-      padding: 10px 14px;
-      display: block;
-    }
-
     /* ── Main grid ──────────────────────────────────────────────── */
     .page {
       display: grid;
@@ -164,7 +146,6 @@
     .footer a:hover { color: #c8d6f0; }
 
     @media (max-width: 720px) {
-      .logo-bar { margin-top: 24px; }
       .page { grid-template-columns: 1fr; grid-template-rows: auto; row-gap: 32px; }
       .headline  { grid-column: 1; grid-row: 1; }
       .optin-col { grid-column: 1; grid-row: 2; }
@@ -207,21 +188,9 @@
 
   </div>
 
-  <!-- Logo -->
-  <div class="logo-bar">
-    <img
-      src="logo.webp"
-      alt="iMarketing Club"
-      width="160"
-      height="160"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
-
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 myincometeamx.com. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy Policy</a></p>
+    <p><a href="/privacy">Privacy Policy</a></p>
     <p style="margin-top:8px;">Results are not typical. Individual results will vary depending on effort, experience, and market conditions. This system is provided for educational and business purposes only and does not guarantee any specific income or results.</p>
   </footer>
 
