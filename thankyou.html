@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Thank You — Your Guide Is Ready | iMarketing Club</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1628;
+      color: #c8d6f0;
+      min-height: 100vh;
+      padding: 48px 16px;
+    }
+
+    .wrap {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Logo */
+    .logo-bar {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo-bar img {
+      width: 140px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+
+    /* Thank you hero */
+    .ty-hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .ty-hero .badge {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .ty-hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .ty-hero h1 em {
+      color: #1a4fba;
+      font-style: normal;
+    }
+
+    .ty-hero p {
+      font-size: 1.05rem;
+      color: #c8d6f0;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* Download box */
+    .download-box {
+      background: #0f2040;
+      border: 2px solid #1a4fba;
+      border-radius: 12px;
+      padding: 28px 28px;
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .download-box p {
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      color: #c8d6f0;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #1a4fba;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+
+    .download-btn:hover { background: #1540a0; }
+
+    .download-btn .icon { margin-right: 8px; }
+
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+      color: #5a7099;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #1e2e4a;
+    }
+
+    /* Offer card */
+    .offer-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 44px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.3);
+    }
+
+    .offer-header {
+      background: #1a4fba;
+      padding: 18px 24px;
+      text-align: center;
+    }
+
+    .offer-header .tag {
+      display: inline-block;
+      background: #f59e0b;
+      color: #0b1628;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .offer-header h2 {
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.25;
+    }
+
+    .offer-body {
+      padding: 28px 28px 32px;
+      color: #0b1628;
+    }
+
+    .offer-body .intro {
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      color: #1e2e4a;
+    }
+
+    .offer-bullets {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .offer-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.97rem;
+      color: #1e2e4a;
+      line-height: 1.5;
+    }
+
+    .offer-bullets li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 9px;
+      height: 9px;
+      background: #1a4fba;
+      border-radius: 50%;
+      margin-top: 5px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .price-now {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1a4fba;
+    }
+
+    .price-note {
+      font-size: 0.82rem;
+      color: #5a7099;
+      line-height: 1.4;
+    }
+
+    .offer-cta {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 900;
+      text-align: center;
+      padding: 18px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(22,163,74,.35);
+      transition: transform .15s, box-shadow .15s;
+    }
+
+    .offer-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(22,163,74,.45);
+    }
+
+    .offer-cta .sub {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 3px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .guarantee {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 18px;
+      font-size: 0.82rem;
+      color: #5a7099;
+      line-height: 1.5;
+    }
+
+    .guarantee .shield {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 16px;
+      padding-top: 20px;
+      border-top: 1px solid #1e2e4a;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #5a7099;
+      line-height: 1.6;
+    }
+
+    .footer a { color: #5a7099; text-decoration: underline; }
+    .footer a:hover { color: #c8d6f0; }
+
+    @media (max-width: 480px) {
+      .offer-body { padding: 22px 18px 26px; }
+      .download-box { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Logo -->
+    <div class="logo-bar">
+      <img src="logo.webp" alt="iMarketing Club" width="140" height="140" loading="eager" decoding="async" />
+    </div>
+
+    <!-- Thank you hero -->
+    <div class="ty-hero">
+      <div class="badge">✓ You're confirmed</div>
+      <h1>Your <em>Free iMarketing Guide</em> Is Ready To Download</h1>
+      <p>Check your inbox too — we've sent a copy to your email so you always have it handy.</p>
+    </div>
+
+    <!-- Download box -->
+    <div class="download-box">
+      <p>Click below to download your guide instantly. No waiting, no hoops.</p>
+      <a class="download-btn" href="guide.pdf" download>
+        <span class="icon">⬇</span> Download Your Free Guide Now
+      </a>
+    </div>
+
+    <!-- Transition into offer -->
+    <div class="divider">One more thing</div>
+
+    <!-- Affiliate offer: Spark by ClickBank -->
+    <div class="offer-card">
+      <div class="offer-header">
+        <div class="tag">Recommended Next Step</div>
+        <h2>The Step-By-Step Training That Takes You From Zero To Your First Affiliate Paycheque</h2>
+      </div>
+      <div class="offer-body">
+        <p class="intro">
+          The guide you just downloaded shows you what to do. <strong>Spark by ClickBank</strong> shows you exactly how to do it — with video lessons, live coaching and a proven roadmap built by the world's largest affiliate marketplace.
+        </p>
+        <ul class="offer-bullets">
+          <li>Step-by-step video training from ClickBank's top earners</li>
+          <li>Live coaching calls so you never get stuck</li>
+          <li>How to pick winning offers and write copy that converts</li>
+          <li>Traffic strategies that work even with zero following</li>
+          <li>Access to ClickBank's private community of active affiliates</li>
+          <li>New lessons added every month — always up to date</li>
+        </ul>
+        <div class="price-row">
+          <span class="price-now">$47<span style="font-size:1rem;font-weight:400">/mo</span></span>
+          <span class="price-note">Cancel any time.<br />30-day money-back guarantee.</span>
+        </div>
+        <!-- Replace YOURAFFID with your ClickBank affiliate ID -->
+        <a class="offer-cta" href="https://YOURAFFID.clkbank.hop.clickbank.net/" target="_blank" rel="noopener">
+          Yes — Show Me Spark By ClickBank
+          <span class="sub">You'll be taken to the official ClickBank page</span>
+        </a>
+        <div class="guarantee">
+          <span class="shield">🛡</span>
+          <span>Backed by ClickBank's 30-day money-back guarantee. If you're not happy for any reason, you pay nothing. No questions asked.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 iMarketing Club. All rights reserved. &nbsp;|&nbsp; <a href="/">Home</a> &nbsp;|&nbsp; <a href="/privacy">Privacy Policy</a></p>
+      <p style="margin-top:8px;">This page contains affiliate links. We may earn a commission if you purchase through our link, at no extra cost to you. Results are not typical and will vary based on effort and experience.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
