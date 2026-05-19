@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 AI Prompts That Write Affiliate Emails For You</title>
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:    #f59e0b;
+      --brand-dk: #d97706;
+      --cta:      #16a34a;
+      --cta-dk:   #15803d;
+      --text:     #1e1b18;
+      --muted:    #57534e;
+      --bg:       #fffbf5;
+      --card:     #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Urgency bar ──────────────────────────────────────────── */
+    .top-bar {
+      background: #1e1b18;
+      color: #fef3c7;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+    }
+    .top-bar strong { color: var(--brand); }
+
+    /* ── Hero section ─────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #1c1917 0%, #292524 60%, #1c1917 100%);
+      color: #fff;
+      padding: 60px 16px 52px;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      display: inline-block;
+      background: var(--brand);
+      color: #1e1b18;
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 4px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.2;
+      max-width: 780px;
+      margin: 0 auto 18px;
+    }
+
+    .hero h1 em {
+      color: var(--brand);
+      font-style: normal;
+    }
+
+    .hero .sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #d6d3d1;
+      max-width: 620px;
+      margin: 0 auto 14px;
+      font-style: italic;
+    }
+
+    /* ── Divider arrow ────────────────────────────────────────── */
+    .arrow-divider {
+      text-align: center;
+      font-size: 1.6rem;
+      color: var(--brand);
+      padding: 24px 0 10px;
+    }
+
+    /* ── Body copy section ────────────────────────────────────── */
+    .copy-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 0;
+      text-align: center;
+    }
+
+    .copy-section p {
+      font-size: 1.15rem;
+      color: #3d3935;
+      margin-bottom: 14px;
+    }
+
+    .copy-section .hook {
+      font-size: clamp(1.2rem, 3vw, 1.55rem);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .copy-section .hook em {
+      color: var(--cta);
+      font-style: normal;
+    }
+
+    .social-proof {
+      display: inline-block;
+      background: #fef9ee;
+      border-left: 4px solid var(--brand);
+      padding: 14px 20px;
+      margin: 24px 0;
+      text-align: left;
+      font-size: 0.97rem;
+      color: var(--muted);
+      border-radius: 0 6px 6px 0;
+      max-width: 560px;
+    }
+    .social-proof strong { color: var(--text); }
+
+    /* ── Bullets box ──────────────────────────────────────────── */
+    .bullets-section {
+      background: var(--card);
+      border: 2px solid #e7e5e4;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 36px auto 0;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.06);
+    }
+
+    .bullets-section h2 {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 26px;
+      color: var(--text);
+    }
+
+    .bullets-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .bullets-section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: 1.05rem;
+      border-bottom: 1px solid #f5f5f4;
+    }
+
+    .bullets-section ul li:last-child { border-bottom: none; }
+
+    .bullets-section ul li .check {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--cta);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .bullets-section ul li .check svg {
+      width: 14px;
+      height: 14px;
+      stroke: #fff;
+      stroke-width: 3;
+      fill: none;
+    }
+
+    /* ── Opt-in form box ──────────────────────────────────────── */
+    .optin-section {
+      max-width: 580px;
+      margin: 48px auto 0;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    .optin-section .cta-lead {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .optin-section .cta-lead span {
+      background: var(--brand);
+      padding: 0 6px;
+      border-radius: 3px;
+    }
+
+    .optin-box {
+      background: var(--card);
+      border: 2px solid var(--brand);
+      border-radius: 12px;
+      padding: 36px 32px 28px;
+      box-shadow: 0 8px 32px rgba(245,158,11,.15);
+    }
+
+    .optin-box h3 {
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      line-height: 1.3;
+      margin-bottom: 22px;
+    }
+
+    .optin-box .arrow-down {
+      font-size: 1.8rem;
+      color: var(--brand);
+      display: block;
+      margin-bottom: 18px;
+      animation: bounce 1.4s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 15px 18px;
+      font-size: 1.05rem;
+      border: 2px solid #d6d3d1;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color .2s;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+    }
+
+    .form-group input::placeholder { color: #a8a29e; }
+    .form-group input:focus { border-color: var(--brand); }
+
+    .cta-btn {
+      width: 100%;
+      padding: 18px 24px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, var(--cta) 0%, var(--cta-dk) 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 14px rgba(22,163,74,.35);
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(22,163,74,.45);
+    }
+    .cta-btn:active { transform: translateY(0); }
+
+    .cta-btn .btn-sub {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      opacity: 0.85;
+      margin-top: 3px;
+      text-transform: none;
+    }
+
+    .privacy-line {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .privacy-line svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ── PS section ───────────────────────────────────────────── */
+    .ps-section {
+      max-width: 620px;
+      margin: 42px auto 0;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .ps-section p {
+      font-size: 1rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .ps-section strong { color: var(--text); font-style: normal; }
+
+    /* ── Footer ───────────────────────────────────────────────── */
+    footer {
+      margin-top: 56px;
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #a8a29e;
+      border-top: 1px solid #e7e5e4;
+    }
+
+    footer a { color: #a8a29e; }
+
+    /* ── Responsive tweaks ────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .bullets-section { padding: 24px 18px; }
+      .optin-box       { padding: 26px 18px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Urgency bar -->
+  <div class="top-bar">
+    <strong>FREE Instant Download:</strong> The AI Prompt Pack for Affiliate Marketers — No Cost, No Catch
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">Free Instant Access</div>
+    <h1>Steal My <em>7 AI Prompts</em> That Write Affiliate Emails For&nbsp;You</h1>
+    <p class="sub">Even if you hate writing, have zero experience and have never made a dollar online</p>
+  </section>
+
+  <!-- Body copy -->
+  <section class="copy-section">
+    <div class="arrow-divider">▼</div>
+
+    <p class="hook">What if you <em>never had to stare at a blank screen again?</em></p>
+
+    <p>These 7 prompts tell AI exactly what to write.</p>
+    <p>Affiliate emails. Follow-up sequences. Subject lines that get opens.</p>
+    <p><strong>All done in minutes. Not hours.</strong></p>
+
+    <div class="social-proof">
+      <strong>Jay Salton from iMarketingClub</strong> put this pack together after testing dozens of prompts across real affiliate campaigns on JVZoo, ClickBank and WarriorPlus.<br /><br />
+      These are the ones that <em>actually work.</em>
+    </div>
+  </section>
+
+  <!-- Bullets -->
+  <div class="bullets-section">
+    <h2>Here's exactly what you're getting&nbsp;👇</h2>
+    <ul>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span>The <strong>"trust builder"</strong> prompt that warms up cold leads fast</span>
+      </li>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span>The <strong>story email prompt</strong> that sells without feeling salesy</span>
+      </li>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span>The <strong>subject line prompt</strong> that gets people to actually open</span>
+      </li>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span>The <strong>"soft pitch" prompt</strong> perfect for affiliate offers</span>
+      </li>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span>The <strong>follow-up prompt</strong> that brings dead leads back to life</span>
+      </li>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span>Works with <strong>ChatGPT or Claude</strong> — free tools you already have</span>
+      </li>
+      <li>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2,9 6,13 14,4"/></svg></span>
+        <span><strong>Copy. Paste. Send.</strong> That's it.</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Opt-in form -->
+  <section class="optin-section">
+    <p class="cta-lead"><span>👇 Enter Your Email Below For Instant Access 👇</span></p>
+
+    <div class="optin-box">
+      <h3>Yes! Send Me The<br /><strong>7 AI Prompt Pack Now — FREE</strong></h3>
+      <span class="arrow-down">↓</span>
+
+      <!-- Replace action URL with your autoresponder form endpoint -->
+      <form action="#" method="POST" id="optinForm">
+        <div class="form-group">
+          <input type="text" name="first_name" placeholder="Your First Name" required autocomplete="given-name" />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Best Email Address" required autocomplete="email" />
+        </div>
+        <button type="submit" class="cta-btn">
+          ✅ YES — Send Me The AI Prompt Pack Now
+          <span class="btn-sub">Instant Access · 100% Free · No Credit Card</span>
+        </button>
+      </form>
+
+      <p class="privacy-line">
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 2a4 4 0 00-4 4v2H5a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2v-7a2 2 0 00-2-2h-1V6a4 4 0 00-4-4zm0 2a2 2 0 012 2v2H8V6a2 2 0 012-2zm0 7a1 1 0 110 2 1 1 0 010-2z"/>
+        </svg>
+        No spam. No fluff. Just the prompts and a quick guide showing you exactly how to use them.
+      </p>
+    </div>
+  </section>
+
+  <!-- PS -->
+  <section class="ps-section">
+    <p><strong>P.S.</strong> This took Jay weeks to test and refine. It takes you about <strong>4 minutes</strong> to start using. Grab it now — before you talk yourself out of it.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 iMarketingClub · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+    <p style="margin-top:6px;">This is not a get-rich-quick scheme. Results vary. Email marketing requires consistent effort.</p>
+  </footer>
+
+</body>
+</html>
